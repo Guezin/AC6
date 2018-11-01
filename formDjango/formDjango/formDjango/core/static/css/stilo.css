@@ -1,0 +1,61 @@
+@charset "utf-8";
+@import "form2.css";
+@import "form3.css";
+@import "fim.css";
+
+body{
+  background-color: black;
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+}
+#linha{
+  height: auto;
+  display: flex;
+  position: relative;
+}
+#linha p{
+  font-size: 60px;
+  margin-left: 30%;
+}
+#formulario{
+  width: 33%;
+  position: relative;
+  left: 33%;
+}
+.fieldset{
+  border-radius: 20px;
+  font-size: 20px;
+}
+legend{
+  font-size: 30px;
+}
+.img_google {
+  width: 200px;
+  height: 100px;
+  margin-top: 70px;
+}
+label{
+  font-size: 25px;
+}
+.tamFont{
+  font-size: 22px;
+}
+input{
+  height: 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 7px;
+}
+.button{
+  width: auto;
+  margin-top: 50px;
+  border: none;
+  background-color: white;
+  font-size: 18px;
+  font-family: 'Shadows Into Light', cursive;
+}
+.button:hover{
+  border: 1px solid green;
+  color: green;
+  cursor: pointer;
+}

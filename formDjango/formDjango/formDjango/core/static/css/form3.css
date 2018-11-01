@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+#fieldset{
+    width: 38%;
+    height: 250px;   
+    border-radius: 10px;
+    position: relative;
+    left: 30%;
+}
+#textarea{
+    position: relative;
+    top: 40px;
+}
+#divBotao{
+    width: 38%;
+    position: relative;
+    left: 31%;
+}

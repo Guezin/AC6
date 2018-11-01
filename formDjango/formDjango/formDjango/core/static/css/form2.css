@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+ul{
+    list-style-type: none;
+    
+}
+li{
+    font-size: 50px;
+}
+#botao{
+    width: auto;
+    margin-top: 50px;
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    font-family: 'Shadows Into Light', cursive;   
+}
+#botao:hover{
+    border: 1px solid green;
+    color: green;
+    cursor: pointer;
+}

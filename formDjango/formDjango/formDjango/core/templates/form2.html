@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+ 
+<div id="linha">
+    <p class="p1">Vaga de estágio em </p><img  class="img_google" src="{% static "img/img_google.jpg" %}" alt="">
+</div>
+
+<div id="formulario">
+    <form  method="POST">
+            {% csrf_token %}
+        <fieldset>
+            <legend><b>Graduação Corrente</b></legend>
+            <ul>
+                <li>
+                    <input type="radio" name="opcaoCurso" value="SI"/>
+                    <label class="tamFont">Sistema de Informação</label>
+                </li>
+                <li>
+                    <input type="radio" name="opcaoCurso" value="CC"/>
+                    <label class="tamFont">Ciência da Computação</label>
+                </li>
+                <li>
+                    <input type="radio" name="opcaoCurso" value="EC"/>
+                    <label class="tamFont">Engenharia da Computação</label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend><b>Qual sua linguagem favorita ?</b></legend>
+                <select name="select" multiple size="3">
+                    <optgroup label="Front-End">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                    </optgroup>
+                    <optgroup label="Back-End">
+                        <option value="python">Python</option>
+                        <option value="php">PHP</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="java">Java</option>
+                    </optgroup>
+                </select>
+            <div class="label">
+                <label for="curso">Outra não Listada:<br></label>
+                <input id="curso" list="cursos" name="cursos"/>
+                <datalist id="cursos">
+                        <option>Assembly</option>
+                        <option>C#</option>
+                        <option>Delphi / Object Pascal</option>
+                        <option>Go</option>
+                        <option>JavaScript</option>
+                        <option>MATLAB</option>
+                        <option>Objective-C</option>
+                        <option>Perl</option>
+                        <option>PHP</option>
+                        <option>PL/SQL</option>
+                        <option>Ruby</option>
+                        <option>Scratch</option>
+                        <option>Swift</option>
+                        <option>Visual Basic.NET</option>
+                </datalist>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><b>Além do Português, possui nível avançado em algum outro idioma ?</b></legend>
+            <ul>
+                <li>
+                    <label class="tamFont">Inglês</label>
+                    <input type="checkbox" name="idioma" value="ingles"/>
+                </li>
+                <li>
+                    <label class="tamFont">Espanhol</label>
+                    <input type="checkbox" name="idioma" value="espanhol"/>
+                </li>
+                <li>
+                    <label class="tamFont">Frances</label>
+                    <input type="checkbox" name="idioma" value="frances"/>
+                </li>
+                <li><label  class="tamFont">Outra não listada:</label><br>
+                    <input id="inputCaixa" list="caixa"/>
+                    <datalist id="caixa">
+                        <option>Alemão</option>
+                        <option>Russo</option>
+                        <option>Árabe</option>
+                        <option>Chinês</option>
+                        <option>Japonês</option>
+                        <option>Bengali</option>
+                        <option>Punjabi/Lahnda</option>
+                    </datalist>
+                </li>
+            </ul>
+        </fieldset>
+
+        <div>
+            <button type="submit" id="botao">Prosseguir, só mais uma página</button><br>
+            <progress value="33" max="100"></progress>    
+        </div>
+    </form>
+</div>
+
+{% endblock %}
